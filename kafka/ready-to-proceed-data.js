@@ -9,7 +9,7 @@ async function isProcessDataAnalyticsTestSuccess(event) {
       age: event.age
     };
 
-    await sendKafkaMessage('tamasha_kafka_clickhouse_testing', msg); // producer data kafka to clickhouse
+    await sendKafkaMessage('kafka_test', msg); // producer data kafka to clickhouse
 
     return true; // Indicate success
   } catch (error) {
