@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+package greet;
+
+service Greeter {
+  rpc gRPCTestfn (gRPCTestfnRequest) returns (gRPCTestfnResponse);
+  rpc gRPCTestAnotherfn (gRPCTestAnotherfnRequest) returns (gRPCTestAnotherfnResponse); // Add this line
+}
+
+message gRPCTestfnRequest {
+  string id = 1;
+  string name = 2;
+  int32 age = 3;
+}
+
+message gRPCTestfnResponse {
+  string id = 1;
+  string message = 2;
+  int32 age = 3;
+}
+
+message gRPCTestAnotherfnRequest {
+  string id = 1;
+  string name = 2;
+}
+
+message gRPCTestAnotherfnResponse {
+  string id = 1;
+  string message = 2;
+}
