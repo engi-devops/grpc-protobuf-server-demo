@@ -3,7 +3,7 @@ require('dotenv').config();
 
 // Kafka configuration
 const kafka = new Kafka({
-  clientId: 'gamepe-technologies-app',
+  clientId: 'test-technologies-app',
   brokers: [`${process.env.IS_KAFKA_BROKER}`], // Replace with your Kafka broker(s)
 });
 
